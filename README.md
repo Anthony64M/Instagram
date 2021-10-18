@@ -13,7 +13,7 @@ Users can sign up, login, view and post photos, search and follow other users.
  
 <img src="https://raw.githubusercontent.com/Anthony64M/Instagram/master/static/images/instagram.png">
  
-###### Log In
+###### Home
 
 <img src="https://raw.githubusercontent.com/Anthony64M/Instagram/master/static/images/home.png">
 
