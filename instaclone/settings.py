@@ -1,4 +1,9 @@
+from pathlib import Path 
 import os
+import django_heroku
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from decouple import config, Csv
 import dj_database_url
 
@@ -27,6 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'instagram',
     'crispy_forms',
+    'cloudinary',
+    'bootstrap4',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -46,7 +53,7 @@ ROOT_URLCONF = 'instaclone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,11 +72,13 @@ WSGI_APPLICATION = 'instaclone.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'instagram',
+        'USER': 'jymal',
+        'PASSWORD':'K8ddj6m2l',
+    }
 }
-
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 # Password validation
@@ -114,6 +123,19 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-LOGIN_REDIRECT_URL = 'index'
+cloudinary.config( 
+  cloud_name = "jymal64", 
+  api_key = "669335511121889", 
+  api_secret = "EpS_T5tgc9t-P1L64Dd3ePXIC0Q" 
+)
 
-LOGOUT_REDIRECT_URL = 'login'
+CRISPY_TEMPLATE_PACK ='bootstrap4'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER='jymal6anthony4@gmail.com'
+EMAIL_HOST_PASSWORD='K8ddj6m2l'
+
+
+django_heroku.settings(locals())
