@@ -27,3 +27,5 @@ sqlparse==0.4.1
 urllib3==1.26.2
 whitenoise==5.2.0
 zipp==3.4.0
+pycodestyle==2.7.0
+toml==0.10.2
