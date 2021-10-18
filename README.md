@@ -9,10 +9,14 @@ Users can sign up, login, view and post photos, search and follow other users.
  <!-- Click [View Site](https://instalite.herokuapp.com/)  to visit the site -->
   
 ## Screenshots 
-###### Home page
+###### Log In
  
 <img src="https://raw.githubusercontent.com/Anthony64M/Instagram/master/static/images/instagram.png">
  
+###### Log In
+
+<img src="https://raw.githubusercontent.com/Anthony64M/Instagram/master/static/images/home.png">
+
  ###### user profile
  <img src="https://raw.githubusercontent.com/Anthony64M/Instagram/master/static/images/profile.png"> 
 
