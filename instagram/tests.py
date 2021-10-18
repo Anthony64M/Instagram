@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class TestProfile(TestCase):
     def setUp(self):
-        self.user = User(username='Anthony')
+        self.user = User(username='anthony')
         self.user.save()
 
         self.profile_test = Profile(id=1, name='image', profile_picture='default.jpg', bio='this is a test profile',
