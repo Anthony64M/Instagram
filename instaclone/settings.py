@@ -89,7 +89,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_registration',
-    'app.apps.AppConfig',
+    'instagram',
+    'crispy_forms',
     'bootstrap4',
     'cloudinary',
 ]
