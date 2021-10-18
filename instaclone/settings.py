@@ -40,7 +40,7 @@ cloudinary.config(
 # SECURITY WARNING: don't run with debug turned on in production!
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG', True)
+DEBUG = os.environ.get('DEBUG', False)
 # development
 if config('MODE')=="dev":
    DATABASES = {
